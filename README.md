@@ -4,6 +4,8 @@ A Command Line Interface for searching Spotify, Bands in Town, and OMDB for info
 
 **How to use Liri**
 
+Video Tutorial found [here](https://youtu.be/6SZcdPUoFAY).
+
 Liri is a node application, which means each command given to Liri should take the form:
 
 > `node liri.js <command> [query]`
