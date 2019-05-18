@@ -73,7 +73,15 @@ function concertThis(artist) {
       }
     })
     .catch(function(error) {
-      console.log(error);
+      if (error.status == 403) {
+        console.log("");
+        console.log("No upcoming shows for this band.");
+        console.log("");
+      } else {
+        console.log("");
+        console.log("Something went wrong. Please try another band.");
+        console.log("");
+      }
     });
 }
 
@@ -106,10 +114,9 @@ function doWhatItSays() {
     if (error) {
       return console.log(error);
     }
-
     let dataArr = data.split(",");
-    let command = dataArr[0];
-    let query = dataArr[1];
+    let command = dataArr[0].trim();
+    let query = dataArr[1].trim();
 
     doThis(command, query);
   });
