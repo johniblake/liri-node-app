@@ -92,7 +92,10 @@ function movieThis(movie) {
     console.log("No movie was entered. Displaying Results for 'Mr. Nobody'.");
   }
   let queryUrl =
-    "http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
+    "http://www.omdbapi.com/?t=" +
+    movie +
+    "&y=&plot=short&apikey=" +
+    keys.omdbKey;
 
   axios
     .get(queryUrl)
